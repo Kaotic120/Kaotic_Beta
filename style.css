@@ -23,8 +23,82 @@ body
     height: 420px;
     background: #1c1c1c;
     border-radius: 8px;
+    overflow: hidden;
 
 }
+.box::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.box::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+.borderline
+{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderline::before
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: 1.5s;
+}
+.borderline::after
+{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}   
 .box form
 {
     position: absolute;
@@ -67,7 +141,7 @@ body
     transition: 0.5s;
     z-index: 10;
 }
-.box form .inputbox input span
+.box form .inputbox input-span
 {
     position: absolute;
     left: 0;
@@ -79,8 +153,8 @@ body
     transition: 0.05;
 
 }
-.box form .inputbox input:valid span,
-.box form .inputbox input:focus span
+.box form .inputbox input:valid-span,
+.box form .inputbox input:focus-span
 {
     
     color: #fff;
@@ -117,11 +191,10 @@ body
 }
 .box form link a:hover,
 .box form link a:nth-child(2)
-{
-    
+{    
     color: #fff;
 }
-.box form .inputbox[type="submit"] 
+.box form .inputbox[type="submit"]
 {
     border: none;
     outline: none;
@@ -139,3 +212,4 @@ body
 {
     opacity: 0.8;
 }
+
