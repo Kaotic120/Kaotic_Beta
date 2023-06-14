@@ -80,7 +80,7 @@ body
 
 }
 .box form .inputbox input:valid span,
-.box form .inputbox input:valid span
+.box form .inputbox input:focus span
 {
     
     color: #fff;
@@ -101,4 +101,37 @@ body
     overflow: hidden;
     transition: 0.5s;
     pointer-events: none;
+}
+.box form link 
+{
+    display:flex;
+    justify-content: space-between;
+}
+.box form link a
+{
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #8f8f8f;
+    text-decoration: none;
+
+}
+.box form link a:hover,
+.box form link a:nth-child(2)
+{
+    
+    color: #fff;
+}
+.box form .inputbox[type="submit"] 
+{
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: #fff;
+    cursor:pointer ;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+
+
 }
