@@ -6,25 +6,38 @@
     font-family: 'poppins'sans-serif;
 
 }
-
+#bt{
+    margin-top: 0px;
+    color: #ebdc10;
+    text-decoration: underline;
+    text-align: center;
+    height: 75px;
+}
 body
 {
+    margin-top: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 10vh;
-    background: rgb(2, 5, 133);
 
+
+    background: transparent;
+    background-image: 
+    url(https://www.ancient-origins.net/sites/default/files/field/image/Chaos.jpg);
+    background-position: center;
+    background-size: cover;
+
+    
 }
 .box
 {
     position: relative;
     width: 380px;
     height: 420px;
-    background: #1c1c1c;
+    background: #f5f4f4;
     border-radius: 8px;
     overflow: hidden;
-
 }
 .box::before
 {
@@ -34,12 +47,14 @@ body
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    background: linear-gradient(0deg,transparent,transparent,#ebdc10,#ebdc10,#ebdc10);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
     animation-delay: -3s;
 }
+
+
 .box::after
 {
     content: '';
@@ -48,7 +63,7 @@ body
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+    background: linear-gradient(0deg,transparent,transparent,#ebdc10,#ebdc10,#ebdc10);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -67,7 +82,7 @@ body
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+    background: linear-gradient(0deg,transparent,transparent,#f505e1,#f505e1,#f505e1);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -81,7 +96,7 @@ body
     left: -50%;
     width: 380px;
     height: 420px;
-    background: linear-gradient(0deg,transparent,transparent,#ff2770,#ff2770,#ff2770);
+    background: linear-gradient(0deg,transparent,transparent,#f505e1,#f505e1,#f505e1);
     z-index: 1;
     transform-origin: bottom right;
     animation: animate 6s linear infinite;
@@ -103,7 +118,8 @@ body
 {
     position: absolute;
     inset: 4px;
-    background: #222;
+    background:rgb(10, 10, 10);
+    
     padding: 50px 40px;
     border-radius: 8px;
     z-index: 2;
@@ -113,8 +129,9 @@ body
 }
 .box form h2
 {
-    color: #fff;
+    color: #f5e507;
     font-weight: 500;
+    
     text-align: center;
     letter-spacing: 0.1em;
 
@@ -134,18 +151,19 @@ body
     padding: 20px 10px 10px;
     background: transparent;
     outline: none;
+    border: none;
     box-shadow: none;
-    color: #e3e4ee;
+    color: #23242a;
     font-size: 1em;
     letter-spacing: 0.05em;
     transition: 0.5s;
     z-index: 10;
 }
-.box form .inputbox input-span
+.box form .inputbox span
 {
     position: absolute;
     left: 0;
-    padding: 20px 10px 10px;
+    padding: 20px 0px 10px;
     pointer-events: none;
     color: #8f8f8f;
     font-size: 1 em;
@@ -159,7 +177,8 @@ body
     
     color: #fff;
     font-size: 0.75em;
-    transform: translate(-34px);
+    transform: translateY(-34px);
+    
 
     
 }
@@ -176,12 +195,20 @@ body
     transition: 0.5s;
     pointer-events: none;
 }
-.box form link 
+
+.box form .inputbox input:valid-i,
+.box form .inputbox input:focus-i
+{
+    height: 44px;    
+
+    
+}
+.box form links 
 {
     display:flex;
     justify-content: space-between;
 }
-.box form link a
+.box form links a
 {
     margin: 10px 0;
     font-size: 0.75em;
@@ -189,12 +216,12 @@ body
     text-decoration: none;
 
 }
-.box form link a:hover,
-.box form link a:nth-child(2)
+.box form links a:hover,
+.box form links a:nth-child(2)
 {    
     color: #fff;
 }
-.box form .inputbox[type="submit"]
+.box form input[type="submit"]
 {
     border: none;
     outline: none;
@@ -211,5 +238,6 @@ body
 .box form .inputbox[type="submit"]:active
 {
     opacity: 0.8;
+    text-align: center;
 }
 
